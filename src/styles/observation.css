@@ -1,0 +1,34 @@
+.observation{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.observation__doctor-name{
+    color: var(--primary-darker);
+    font-weight: var(--weight-primary);
+    margin: 0;
+}
+
+.observation__doctor{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.observation__doctor-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.observation__trash{
+    width: fit-content;
+    cursor: pointer;
+}
+
+p{
+    font-weight: var(--weight-secondary);
+    color: var(--neutral);
+    margin: 0;
+}
