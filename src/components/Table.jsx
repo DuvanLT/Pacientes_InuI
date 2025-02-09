@@ -2,8 +2,13 @@ import '../styles/table.css'
 import { COLUMNS } from '../constants/table'
 import { usePatients } from '../hook/usePatients'
 import { API_URL } from '../constants/api'
+import { usePatientContext } from '../context/patientContext'
+import Card from './Card'
 export default function Table() {
-    const {data} = usePatients(`${API_URL}/patients`)
+    const {data,refetch} = usePatients(`${API_URL}/patients`)
+    const {selectedPatient, setSelectedPatient} = usePatientContext()
+    const handlePatientSelection = (patient) => {setSelectedPatient(patient)}
+    const handleDataUpdate = async () => {refetch()}
     return(
         <>
         <h1 className="table__title">Directorio de Pacientes</h1>
@@ -20,7 +25,8 @@ export default function Table() {
                         {data?.patients?.map((patient) => (
                     <tr key={patient.id}>
                                   <td className="table__content-element">{patient.id}</td>
-                                  <td className="table__content-element name">{patient.Paciente}</td>
+                                  <td className="table__content-element name" 
+                                  onClick={() => handlePatientSelection(patient)}>{patient.Paciente}</td>
                                   <td className="table__content-element">CC - {patient.Identificacion}</td>
                                   <td className="table__content-element">{patient.Celular}</td>
                                   <td className="table__content-element">{patient.Entidad}</td>
@@ -37,6 +43,7 @@ export default function Table() {
                 </tbody>
             </table>
         </div>
+        {selectedPatient && <Card patientData={selectedPatient} onUpdate={handleDataUpdate} /> }
         </>
     )
 }

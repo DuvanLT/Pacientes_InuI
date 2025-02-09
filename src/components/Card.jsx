@@ -1,95 +1,49 @@
 import X from '../assets/X.svg'
-import edit from '../assets/edit.svg'
+import { PATIENT_INFO } from '../constants/card'
+import { usePatientContext } from '../context/patientContext'
+import { usePatientForm } from '../hook/usePatientForm'
 import '../styles/card.css'
+import EditInput from './EditInput'
 import Observation from './Observation'
 
-export default function Card() {
+export default function Card({patientData, onUpdate}) {
+    const {editFields,toggleField,handleChangeData,observacionInput,setObservacionInput,handleSendData,data
+    } = usePatientForm(patientData,onUpdate)
+    const {setSelectedPatient} = usePatientContext()
+    const handleClosePatient = () => {setSelectedPatient(null)}
     return(
         <>
             <div className="card__container">
                 <div className="card">
                     <div className="card__header">
                         <h4 className="card__header-title">Informacion Paciente</h4>
-                        <img className='card__header-close' src={X} alt="" />
+                        <img className='card__header-close' onClick={handleClosePatient}  src={X} alt="" />
                     </div>
                     <div className="card__content">
                         <div className="card__content-name">
-                        <div className="card__information-item">
-                                <div className="card__information-edit">
-                                    <h5>Paciente</h5>
-                                    <img src={edit} alt="" />
-                                </div>
-                                <p>Javier Andres Caicedo Rodriguez</p>
-                            </div>
+                        <EditInput label="Paciente" value={data.Paciente} isEditing={editFields['Paciente'] || false}
+                                onToggle={() => toggleField('Paciente')} inputName={true} onChange={(value) => handleChangeData('Paciente', value)}
+                               />
                         </div>
                         <div className="card__content-information">
-                            <div className="card__information-item">
-                                <div className="card__information-edit">
-                                    <h5>Fecha de Nacimiento</h5>
-                                    <img src={edit} alt="" />
-                                </div>
-                                <p>10/01/2000</p>
-                            </div>
-                            <div className="card__information-item">
-                                <div className="card__information-edit">
-                                    <h5>Fecha de Nacimiento</h5>
-                                    <img src={edit} alt="" />
-                                </div>
-                                <p>10/01/2000</p>
-                            </div>
-                            <div className="card__information-item">
-                                <div className="card__information-edit">
-                                    <h5>Fecha de Nacimiento</h5>
-                                    <img src={edit} alt="" />
-                                </div>
-                                <p>10/01/2000</p>
-                            </div>
-                            <div className="card__information-item">
-                                <div className="card__information-edit">
-                                    <h5>Fecha de Nacimiento</h5>
-                                    <img src={edit} alt="" />
-                                </div>
-                                <p>10/01/2000</p>
-                            </div>
-                            <div className="card__information-item">
-                                <div className="card__information-edit">
-                                    <h5>Fecha de Nacimiento</h5>
-                                    <img src={edit} alt="" />
-                                </div>
-                                <p>10/01/2000</p>
-                            </div>
-                            <div className="card__information-item">
-                                <div className="card__information-edit">
-                                    <h5>Fecha de Nacimiento</h5>
-                                    <img src={edit} alt="" />
-                                </div>
-                                <p>10/01/2000</p>
-                            </div>
-                            <div className="card__information-item">
-                                <div className="card__information-edit">
-                                    <h5>Fecha de Nacimiento</h5>
-                                    <img src={edit} alt="" />
-                                </div>
-                                <p>10/01/2000</p>
-                            </div>
-                            <div className="card__information-item">
-                                <div className="card__information-edit">
-                                    <h5>Fecha de Nacimiento</h5>
-                                    <img src={edit} alt="" />
-                                </div>
-                                <p>10/01/2000</p>
-                            </div>
+                            {PATIENT_INFO.map((info) => (
+                               <EditInput key={info.value} label={info.title} value={data[info.value]} isEditing={editFields[info.value] || false}
+                                onToggle={() => toggleField(info.value)} inputName={false} onChange={(value) => handleChangeData(info.value, value)}
+                               />
+                            ))}
                         </div>
                     </div>
                     <div className="card__footer">
-                            <span className='card__footer-checkin'>Ultimo Checkin:</span>
+                            <span className='card__footer-checkin'>Ultimo Checkin: {data.Checkin || "Sin registro"}</span>
                             <h5>Agregar Observacion</h5>
-                            <textarea className='card__footer-text' name="" id=""></textarea>
+                            <textarea className='card__footer-text' placeholder='Observacion' value={observacionInput}
+                            onChange={(e) => setObservacionInput(e.target.value)}
+                            ></textarea>
                             <div className="card__button">
-                                <button className='card__button-element'>Guardar</button>
+                                <button onClick={() => handleSendData(patientData.id)} className='card__button-element'>Guardar</button>
                             </div>
                     </div>
-                    <Observation />
+                    {data.Observacion !== "" && <Observation observation={data.Observacion} />}
                 </div>
             </div>
         </>

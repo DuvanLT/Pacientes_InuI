@@ -13,7 +13,6 @@
     position: relative;
     background: var(--light-color);
     padding: 24px;
-    display: none;
 }
 
 
@@ -96,4 +95,24 @@ h5{
     color: var(--neutral);
     font-weight: var(--weight-secondary);
     margin: 10px 0px;
+}
+
+.card__information-input{
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    color: var(--neutral);
+    font-weight: var(--weight-secondary);
+    font-size: 16px;
+}
+
+input:enabled {
+    border: solid 1px var(--neutral);
+    padding: 4px;
+    border-radius: var(--border-radius);
+}
+
+.card__input-name{
+    max-width: 250px;
+    width: 100%;
 }
