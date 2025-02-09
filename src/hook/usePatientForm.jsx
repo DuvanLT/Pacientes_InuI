@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import { useSendData } from '../hook/useSendData'
+import { useSaveDate } from './useSaveDate'
 
 export function usePatientForm(initialData, onUpdate) {
   const [data, setData] = useState(initialData)
   const [editFields, setEditFields] = useState({})
   const [observacionInput, setObservacionInput] = useState('')
   const { sendUpdatedData } = useSendData()
-
+  const {saveDate} = useSaveDate()
   const handleChangeData = (key, value) => {
     setData((prev) => ({ ...prev, [key]: value }))
   }
@@ -16,7 +17,8 @@ export function usePatientForm(initialData, onUpdate) {
   }
 
   const handleSendData = async (id) => {
-    const updatedData = { ...data}
+    const currentDate = saveDate()
+    const updatedData = { ...data, Checkin: currentDate}
 
     if (observacionInput.length > 5) {
       updatedData.Observacion = observacionInput

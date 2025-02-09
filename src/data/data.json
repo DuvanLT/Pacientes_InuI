@@ -10,13 +10,13 @@
       "Tipo de Atencion": "Psicologia",
       "Estado": "Estable",
       "Fecha Nacimiento": "01/01/1995",
-      "Edad": "36",
+      "Edad": "35",
       "Tipo de Identificacion": "Cedula de Cuidadania",
       "Telefono": "(58) 1243532",
       "Direccion": "Calle 15C # 92-51",
       "Ocupacion": "Independiente",
       "Observacion": "El paciente presenta mejoras, cada día es mas consiente de lo sucedido días previos a su consulta",
-      "Checkin": "2/7/2025 8:26"
+      "Checkin": "9/2/2025 Hora: 18:32"
     },
     {
       "id": 1533,
@@ -31,10 +31,10 @@
       "Edad": "48",
       "Tipo de Identificacion": "Cédula de Ciudadanía",
       "Telefono": "(602) 7654321",
-      "Direccion": "Carrera 10 # 20-15",
+      "Direccion": "Calle 10 # 20-15",
       "Ocupacion": "Docente",
-      "Observacion": "Necesita estar con su familia ",
-      "Checkin": "2/7/2025 8:47"
+      "Observacion": "Necesita un tiempo a solas",
+      "Checkin": "9/2/2025 Hora: 18:34"
     },
     {
       "id": 1534,
