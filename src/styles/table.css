@@ -42,11 +42,24 @@
 .status{
     display: flex;
     justify-content: center;
-    color: var(--green);
-    background-color: var(--green2);
     padding: 6px 4px;
     border-radius: var(--border-radius);
     font-weight: var(--weight-primary);
+}
+
+.estable{
+    color: var(--green);
+    background-color: var(--green2);
+}
+
+.moderado{
+    color: var(--orange);
+    background-color: var(--orange2);
+}
+
+.critico{
+    color: var(--red);
+    background-color: var(--red2);
 }
 
 .table__content tr:nth-child(odd){
