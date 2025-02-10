@@ -3,10 +3,10 @@
 <h3>TECNOLOGIAS Y DEPENDENCIAS</h3>
 <ul>
   <li><b>Tecnologias:</b></li>
-  <li>React.js (Vite) </li> [![React](https://img.shields.io/badge/React-%2320232a.svg?logo=react&logoColor=%2361DAFB)](#)
-  <li>Javascript </li> [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)](#)
-  <li>Node.js (express) </li> [![Express.js](https://img.shields.io/badge/Express.js-%23404d59.svg?logo=express&logoColor=%2361DAFB)](#)
-  <li>CSS (Metodologia BEM) </li> [![CSS](https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=fff)](#)
+  <li>React.js (Vite) </li> 
+  <li>Javascript </li>
+  <li>Node.js (express) </li>
+  <li>CSS (Metodologia BEM) </li>
 </ul>
 <ul>
   <li><b>Depedencias:</b></li>
