@@ -1,5 +1,5 @@
 # PRUEBA INUI DIRECTORIO DE PACIENTES
-
+<a href="https://pacientes-inu-i.vercel.app/" target="_BLANK">Enlace a proyecto</a>
 <h3>TECNOLOGIAS Y DEPENDENCIAS</h3>
 <ul>
   <li><b>Tecnologias:</b></li>
@@ -37,6 +37,10 @@
 <li>Carpeta hook: Contiene los hooks personalizados de nuestro proyecto para mas claridad y reutilizacion de este</li>
 <li>Carpeta Styles: Contiene los estilos de cada componente en nuestro proyecto</li>
 </ul>
+
+# DEPLOY:
+
+<p>Se realizo el deploy en vercel para su Frontend y Render para su backend, el servicio render es gratuito cuenta con 50 segundos de encendido maximo, en palabras simples si ingresar por primera vez en el dia probablemente los datos cargen en ese tiempo maximo</p>
 
 # DESARROLLADOR:
 
