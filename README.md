@@ -2,14 +2,14 @@
 
 <h3>TECNOLOGIAS Y DEPENDENCIAS</h3>
 <ul>
-  <li>Tecnologias:</li>
+  <li><b>Tecnologias:</b></li>
   <li>React.js (Vite)</li>
   <li>Javascript</li>
   <li>Node.js (express)</li>
   <li>CSS (Metodologia BEM)</li>
 </ul>
 <ul>
-  <li>Depedencias:</li>
+  <li><b>Depedencias:</b></li>
   <li>Fs</li>
   <li>Cors</li>
   <li>React Query</li>
@@ -43,3 +43,5 @@ Carpeta Styles: Contiene los estilos de cada componente en nuestro proyecto
 <p>Duvan Mancilla es un Ingeniero de Sistemas ubicado en la Cuidad de Cali, cuenta con experiencia en areas como el Backend y Frontend es distintos niveles de exigencia en proyectos,
   Se encuentra en mejora continua gracias a su habilidad del conocimiento continuo junto con un aprendizaje autodidacta.
 </p>
+
+<img src="https://media.licdn.com/dms/image/v2/D4E03AQFdT9DuKzDuYw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1723828484621?e=1744848000&v=beta&t=AdV0zfvmvlV4DVz4C3Zd4iKLJztafRsogv-On389kdo" alt="Duvan Mancilla Fullstack developer y System Engineer" />
