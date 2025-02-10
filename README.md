@@ -13,6 +13,7 @@
   <li>Fs</li>
   <li>Cors</li>
   <li>React Query</li>
+  <li>dotenv</li>
 </ul>
 
 # PROCESO DE INSTALACION [![npm](https://img.shields.io/badge/npm-CB3837?logo=npm&logoColor=fff)](#):
