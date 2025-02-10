@@ -1,13 +1,16 @@
 import e from 'express'
 import cors from 'cors'
 import { useDB } from '../api/readData.js'
-import { PORT } from '../constants/api.js'
-import { DB_FILE } from '../constants/api.js'
 import fs from 'fs'
+import dotenv from 'dotenv'
 
+dotenv.config()
 const app = e()
 app.use(cors())
 app.use(e.json())
+
+const PORT = process.env.PORT
+const DB_FILE = process.env.DB_FILE
 
 app.get("/patients", (req,res) => {
     const data = useDB()

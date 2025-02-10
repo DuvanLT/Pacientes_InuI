@@ -1,7 +1,10 @@
-import { DB_FILE } from "../constants/api.js";
+import dotenv from 'dotenv'
 import fs from 'fs'
 
-const DATABASE = DB_FILE
+dotenv.config()
+
+
+const DATABASE = process.env.DB_FILE
 
 export const useDB = () => {
     const data = fs.readFileSync(DATABASE, "utf8")

@@ -1,8 +1,8 @@
 import '../styles/table.css'
 import { COLUMNS } from '../constants/table'
 import { usePatients } from '../hook/usePatients'
-import { API_URL } from '../constants/api'
 import { usePatientContext } from '../context/patientContext'
+import { API_URL } from '../constants/api'
 import Card from './Card'
 export default function Table() {
     const {data,refetch} = usePatients(`${API_URL}/patients`)
