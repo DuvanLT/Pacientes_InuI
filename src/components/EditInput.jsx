@@ -1,4 +1,4 @@
-import edit from '../assets/edit.svg'
+import edit from '../assets/Edit.svg'
 export default function EditInput({label,value,onToggle,isEditing,inputName,onChange}) {
     return(
         <>
