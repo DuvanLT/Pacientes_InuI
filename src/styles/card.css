@@ -1,0 +1,118 @@
+.card__container{
+    position: absolute;
+    inset: 0;
+    margin: 20px auto;
+    width: fit-content; 
+    height: fit-content; 
+}
+
+.card{
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    max-width: 404px;
+    position: relative;
+    background: var(--light-color);
+    padding: 24px;
+}
+
+
+h5{
+    font-size: 16px;
+    margin: 0;  color: var(--primary-darker);
+    font-weight: var(--weight-primary);
+}
+
+
+.card__header-title{
+    color: var(--primary-darker);
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.card__header-close{
+   position: absolute;
+   right: 6px;
+   top: 6px;
+   cursor: pointer;
+}
+.card__button-element{
+    cursor: pointer;
+}
+
+.card__content-name {
+    grid-column: span 2;
+    margin: 16px 0px;
+}
+
+.card__content-information{
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.card__information-item {
+    min-width: 200px;
+}
+
+.card__information-edit{
+    display: flex;
+}
+.card__edit-icon{
+    cursor: pointer;
+}
+.card__content-title{
+    color: var(--primary-darker);
+    margin: 0;
+}
+
+.card__footer{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.card__footer-text{
+    min-height: 127px;
+    border-radius: var(--border-radius);
+}
+
+.card__button{
+    display: flex;
+    justify-content: end;
+}
+
+.card__button-element{
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    font-weight: var(--weight-primary);
+    color: var(--green);
+}
+.card__footer-checkin{
+    font-size: 14px;
+    color: var(--neutral);
+    font-weight: var(--weight-secondary);
+    margin: 10px 0px;
+}
+
+.card__information-input{
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    color: var(--neutral);
+    font-weight: var(--weight-secondary);
+    font-size: 16px;
+}
+
+input:enabled {
+    border: solid 1px var(--neutral);
+    padding: 4px;
+    border-radius: var(--border-radius);
+}
+
+.card__input-name{
+    max-width: 250px;
+    width: 100%;
+}
